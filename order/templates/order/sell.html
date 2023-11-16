@@ -1,0 +1,110 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Sell</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'inventory/css/style1.css' %}"/>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+   
+</head>  
+<body>  
+<form method="POST" class="post-form" action="">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Enter Sell Details</h3>  
+    </div>  
+  </div>  
+    
+    </div>  
+  </div>  
+  
+
+  <div class="form-group row">  
+    <div class="col-sm-4">  
+        {{ form.as_p }} {{form.label_tag}}<small class="text-danger">{{form.quantity_sold.errors|striptags}}</small><br>
+    </div>  
+  </div>
+    
+<div class="form-group row">  
+<label class="col-sm-1 col-form-label"></label>  
+<div class="col-sm-4">  
+<br>  
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>  
+<br>  
+<br>
+<br>  
+<br>
+<a href="{% url "order_list" %}" class="btn btn-primary">Show Order Record</a>
+</div>  
+</div>  
+</div>  
+</form>  
+</body>  
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Inventory Id:</label>  
+    <div class="col-sm-4">  
+      {{ form.inventory_id }}  
+      <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">IIN:</label>  
+      <div class="col-sm-4">  
+        {{ form.iin }}  
+      </div>  
+    </div>  
+    <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Quantity</label>  
+        <div class="col-sm-4">  
+          {{ form.quantity }}  
+    </div>  
+     <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Quantity Sold</label>  
+                   <div class="col-sm-4">  
+              {{ form.quantity_sold }}  
+            </div> 
+          <div class="form-group row">  
+                    <label class="col-sm-2 col-form-label">Profit Earned </label>  
+                    <div class="col-sm-4">  
+                      {{ form.profit_earned }}  
+                    </div> 
+                    <div class="form-group row">  
+                        <label class="col-sm-2 col-form-label">Revenue </label>  
+                        <div class="col-sm-4">  
+                          {{ form.revenue }}        
+                        </div>   
+  </div>   -->
+           
